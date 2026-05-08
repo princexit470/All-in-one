@@ -1232,28 +1232,35 @@
         }
 
         function renderVideos() {
-            const q = (document.getElementById('searchVideos')?.value || '').toLowerCase();
-            const filtered = ALL_VIDEOS.filter(v => (v.title || '').toLowerCase().includes(q));
-            const feed = document.getElementById('videoFeed');
-            if (!ALL_VIDEOS.length) { feed.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--dim);">No videos yet</div>'; return; }
-            if (!filtered.length) { feed.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>'; return; }
-            const admin = isAdmin();
-            feed.innerHTML = filtered.map((v, idx) => {
-                const thumb = v.isDirectVideo ? `<video src="${v.displayUrl}" preload="metadata" controls playsinline></video>` : `<iframe src="${v.displayUrl}" allowfullscreen loading="lazy"></iframe>`;
-                return `
-                <div class="video-card-yt">
-                    <div class="video-thumb-yt" onclick="window.open('${v.originalLink}','_blank')">${thumb}</div>
-                    <div class="video-info-yt">
-                        <h3>${v.title}</h3>
-                        <button class="video-menu-dot" onclick="toggleMenu(event,'vm${idx}')">⋮</button>
-                        <div class="context-menu" id="vm${idx}" style="top:40px;right:4px;">
-                            <button onclick="event.stopPropagation(); window.open('${v.originalLink}','_blank')"><i class="fas fa-external-link-alt"></i> Open Original</button>
-                            ${admin ? `<button onclick="event.stopPropagation(); deleteMediaById('${v.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i> Delete</button>` : ''}
-                        </div>
-                    </div>
-                </div>`;
-            }).join('');
-        }
+    const q = (document.getElementById('searchVideos')?.value || '').toLowerCase();
+    const filtered = ALL_VIDEOS.filter(v => (v.title || '').toLowerCase().includes(q));
+    const feed = document.getElementById('videoFeed');
+    if (!ALL_VIDEOS.length) {
+        feed.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--dim);">No videos yet</div>';
+        return;
+    }
+    if (!filtered.length) {
+        feed.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>';
+        return;
+    }
+    const admin = isAdmin();
+    feed.innerHTML = filtered.map((v, idx) => {
+        const thumb = v.isDirectVideo
+            ? `<video src="${v.displayUrl}" preload="metadata" controls playsinline></video>`
+            : `<iframe src="${v.displayUrl}" allowfullscreen loading="lazy"></iframe>`;
+        return `
+        <div class="video-card-yt">
+            <div class="video-thumb-yt" onclick="window.open('${v.originalLink}','_blank')">${thumb}</div>
+            <div class="video-info-yt">
+                <h3>${v.title}</h3>
+                <button class="video-menu-dot" onclick="toggleMenu(event,'vm${idx}')">⋮</button>
+                <div class="context-menu" id="vm${idx}" style="top:40px;right:4px;">
+                    ${admin ? `<button onclick="event.stopPropagation(); deleteMediaById('${v.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i> Delete</button>` : ''}
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
 
         function renderDocs() {
             const q = (document.getElementById('searchDocs')?.value || '').toLowerCase();
