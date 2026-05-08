@@ -38,8 +38,6 @@
             overflow: hidden;
             touch-action: none;
         }
-
-        /* TOAST */
         .toast-container {
             position: fixed;
             top: 20px;
@@ -80,8 +78,6 @@
                 opacity: 1;
             }
         }
-
-        /* NAVBAR */
         .navbar {
             position: sticky;
             top: 0;
@@ -212,8 +208,6 @@
             background: rgba(255, 255, 255, 0.05);
             color: #fff;
         }
-
-        /* HAMBURGER */
         .hamburger {
             display: none;
             background: none;
@@ -256,6 +250,10 @@
             cursor: pointer;
             font-weight: 500;
         }
+        .mobile-menu a:hover {
+            color: #fff;
+            background: rgba(255, 255, 255, 0.05);
+        }
         .mobile-divider {
             border: none;
             border-top: 1px solid var(--border);
@@ -271,8 +269,6 @@
         .overlay.show {
             display: block;
         }
-
-        /* MAIN */
         .main-content {
             padding: 2rem;
             max-width: 1400px;
@@ -296,14 +292,13 @@
                 transform: translateY(0);
             }
         }
-
         .search-container {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             display: flex;
             align-items: center;
             background: var(--surface);
             border-radius: 30px;
-            padding: 0.8rem 1.5rem;
+            padding: 0.7rem 1.4rem;
             border: 1px solid var(--border);
             transition: var(--transition);
         }
@@ -313,7 +308,8 @@
         }
         .search-container i {
             color: var(--dim);
-            margin-right: 12px;
+            margin-right: 10px;
+            font-size: 1rem;
         }
         .search-container input {
             background: transparent;
@@ -321,31 +317,30 @@
             color: #fff;
             width: 100%;
             outline: none;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
         .search-container input::placeholder {
             color: var(--dim);
         }
-
         .add-media-bar {
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 1rem;
+            gap: 10px;
+            margin-bottom: 0.8rem;
             flex-wrap: wrap;
         }
         .add-media-btn {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 0.7rem 1.4rem;
+            gap: 6px;
+            padding: 0.6rem 1.2rem;
             border-radius: 25px;
             background: var(--gold);
             color: #000;
             border: none;
             cursor: pointer;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: var(--transition);
         }
         .add-media-btn:hover {
@@ -353,14 +348,13 @@
             transform: translateY(-2px);
         }
         .media-count-badge {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--dim);
             background: var(--surface);
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 0.9rem;
             border-radius: 20px;
             border: 1px solid var(--border);
         }
-
         .hero-section {
             text-align: center;
             padding: 3rem 0;
@@ -375,7 +369,6 @@
             color: var(--dim);
             font-size: 1.2rem;
         }
-
         .live-section {
             margin: 2rem auto;
             max-width: 1000px;
@@ -383,12 +376,13 @@
             background: var(--surface);
             border-radius: var(--radius);
             border: 1px solid var(--border);
+            position: relative;
         }
         .live-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
         .live-header-left {
             display: flex;
@@ -398,9 +392,9 @@
         .live-badge {
             background: #e74c3c;
             color: #fff;
-            padding: 0.4rem 1rem;
+            padding: 0.35rem 0.9rem;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             font-weight: 700;
             animation: pulse 2s infinite;
             display: inline-flex;
@@ -432,7 +426,8 @@
             position: relative;
             border: 1px solid var(--border);
         }
-        .live-video-container iframe {
+        .live-video-container iframe,
+        .live-video-container video {
             width: 100%;
             height: 100%;
             border: none;
@@ -456,7 +451,24 @@
             color: var(--dim);
             letter-spacing: 3px;
         }
-
+        .live-admin-set-btn {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border);
+            color: #fff;
+            padding: 0.3rem 0.9rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 5;
+        }
+        .live-admin-set-btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
         .quick-links {
             display: flex;
             justify-content: center;
@@ -488,17 +500,14 @@
         .quick-link-card span {
             font-weight: 600;
         }
-
         .section-title {
             font-size: 1.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
-        /* GALLERY */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -596,8 +605,6 @@
             background: rgba(255, 255, 255, 0.05);
             color: var(--gold);
         }
-
-        /* LIGHTBOX */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -607,6 +614,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            overflow: hidden;
         }
         .lightbox.show {
             display: flex;
@@ -617,16 +625,19 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 75vh;
-            transition: transform 0.3s;
+            height: 70vh;
+            transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            will-change: transform;
         }
         .lightbox img {
             max-width: 90vw;
-            max-height: 100%;
+            max-height: 68vh;
             border-radius: 8px;
             user-select: none;
             pointer-events: none;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            object-fit: contain;
+            display: block;
         }
         .lb-close-btn,
         .lb-download-btn {
@@ -666,15 +677,16 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border);
             color: #fff;
-            font-size: 1.5rem;
-            width: 50px;
-            height: 50px;
+            font-size: 1.4rem;
+            width: 46px;
+            height: 46px;
             border-radius: 50%;
             cursor: pointer;
             z-index: 20;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: var(--transition);
         }
         .lb-nav-btn:hover {
             background: var(--gold);
@@ -688,126 +700,122 @@
         }
         .lb-counter-text {
             position: absolute;
-            bottom: 90px;
+            bottom: 85px;
             color: var(--dim);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             z-index: 20;
+            text-align: center;
+            max-width: 80%;
         }
         .lb-action-bar {
             position: absolute;
-            bottom: 25px;
+            bottom: 22px;
             display: flex;
             gap: 1rem;
             z-index: 20;
         }
         .lb-action-bar button {
-            padding: 0.7rem 1.5rem;
+            padding: 0.6rem 1.3rem;
             border-radius: 25px;
             border: 1px solid var(--border);
             background: rgba(0, 0, 0, 0.5);
             color: #fff;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: var(--transition);
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 7px;
         }
         .lb-action-bar button:hover {
             background: var(--gold);
             color: #000;
         }
-
-        /* VIDEO FEED */
         .video-feed {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            max-width: 1000px;
+            gap: 0.8rem;
+            max-width: 800px;
             margin: 0 auto;
         }
         .video-card-yt {
             display: flex;
-            gap: 1.5rem;
+            gap: 0.8rem;
             background: var(--surface);
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border);
             transition: var(--transition);
-        }
-        .video-card-yt:hover {
-            border-color: rgba(255, 255, 255, 0.2);
+            align-items: stretch;
         }
         .video-thumb-yt {
-            width: 320px;
-            min-width: 280px;
+            width: 150px;
+            min-width: 130px;
             aspect-ratio: 16/9;
             background: #050505;
             position: relative;
             flex-shrink: 0;
             border-right: 1px solid var(--border);
+            overflow: hidden;
+            cursor: pointer;
         }
-        .video-thumb-yt iframe {
+        .video-thumb-yt iframe,
+        .video-thumb-yt video {
             width: 100%;
             height: 100%;
             border: none;
-            pointer-events: none;
+            object-fit: cover;
         }
         .video-info-yt {
-            padding: 1.5rem 1.5rem 1.5rem 0;
-            flex: 1;
-        }
-        .video-info-yt h3 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-        .video-meta {
-            font-size: 0.85rem;
-            color: var(--dim);
-            margin-bottom: 12px;
-        }
-        .video-actions-yt {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .video-actions-yt button {
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: #fff;
-            cursor: pointer;
-            font-size: 0.8rem;
-            transition: var(--transition);
+            padding: 0.6rem 0.7rem 0.6rem 0;
             display: flex;
             align-items: center;
-            gap: 6px;
+            flex: 1;
+            min-width: 0;
+            position: relative;
         }
-        .video-actions-yt button:hover {
+        .video-info-yt h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.3;
+            padding-right: 26px;
+            margin: 0;
+        }
+        .video-menu-dot {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: transparent;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            transition: var(--transition);
+        }
+        .video-menu-dot:hover {
             background: rgba(255, 255, 255, 0.08);
         }
-        .video-actions-yt button.primary-btn-yt {
-            background: var(--gold);
-            border: none;
-            color: #000;
-            font-weight: 600;
-        }
-        .video-actions-yt button.primary-btn-yt:hover {
-            background: var(--gold-hover);
-        }
-
-        /* DOC LIST */
         .doc-list {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         .doc-item {
             background: var(--surface);
             border: 1px solid var(--border);
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.3rem;
             border-radius: 14px;
             display: flex;
             align-items: center;
@@ -821,21 +829,21 @@
         .doc-info {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
             overflow: hidden;
             flex: 1;
         }
         .doc-info i {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: #e74c3c;
             background: rgba(231, 76, 60, 0.1);
-            padding: 12px;
+            padding: 10px;
             border-radius: 10px;
             flex-shrink: 0;
         }
         .doc-info span {
             font-weight: 500;
-            font-size: 1.05rem;
+            font-size: 0.95rem;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -843,11 +851,34 @@
         }
         .doc-actions-group {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             flex-shrink: 0;
         }
-
-        /* DOC FULL LIGHTBOX */
+        .doc-actions-group button {
+            padding: 0.45rem 0.9rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .doc-actions-group button:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .doc-actions-group button.primary {
+            background: var(--gold);
+            border: none;
+            color: #000;
+            font-weight: 600;
+        }
+        .doc-actions-group button.primary:hover {
+            background: var(--gold-hover);
+        }
         .doc-lightbox-full {
             position: fixed;
             inset: 0;
@@ -873,21 +904,21 @@
         .doc-lightbox-full .doc-title {
             color: #fff;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             max-width: 60%;
         }
         .doc-lightbox-full .doc-download-btn {
             background: var(--gold);
             color: #000;
             border: none;
-            padding: 0.6rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 25px;
             cursor: pointer;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: var(--transition);
         }
         .doc-lightbox-full .doc-download-btn:hover {
@@ -897,11 +928,11 @@
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #fff;
-            width: 40px;
-            height: 40px;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -912,8 +943,6 @@
             border: none;
             background: #111;
         }
-
-        /* MODALS */
         .modal-backdrop {
             position: fixed;
             inset: 0;
@@ -930,7 +959,7 @@
         .modal-dialog {
             background: #0a0a0a;
             border-radius: 24px;
-            padding: 2.5rem;
+            padding: 2.2rem;
             width: 90%;
             max-width: 420px;
             border: 1px solid var(--border);
@@ -940,21 +969,21 @@
         .modal-dialog h2 {
             color: var(--gold);
             text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 700;
         }
         .modal-dialog input,
         .modal-dialog textarea {
             width: 100%;
-            padding: 0.9rem 1.2rem;
-            margin: 0.5rem 0;
+            padding: 0.85rem 1.1rem;
+            margin: 0.4rem 0;
             border-radius: 12px;
             border: 1px solid var(--border);
             background: #000;
             color: #fff;
             outline: none;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-family: inherit;
             resize: vertical;
         }
@@ -964,14 +993,14 @@
         }
         .modal-dialog .modal-submit {
             width: 100%;
-            padding: 0.9rem;
-            margin-top: 1.2rem;
+            padding: 0.85rem;
+            margin-top: 1rem;
             border-radius: 12px;
             border: none;
             background: var(--gold);
             color: #000;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: var(--transition);
         }
@@ -980,12 +1009,12 @@
         }
         .modal-close {
             position: absolute;
-            top: 16px;
-            right: 20px;
+            top: 14px;
+            right: 18px;
             background: none;
             border: none;
             color: var(--dim);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
         }
         .modal-close:hover {
@@ -1002,8 +1031,8 @@
         .forgot-link {
             display: block;
             text-align: right;
-            margin-top: 8px;
-            font-size: 0.8rem;
+            margin-top: 6px;
+            font-size: 0.78rem;
             color: var(--dim);
             cursor: pointer;
         }
@@ -1016,37 +1045,22 @@
         .modal-subtitle {
             text-align: center;
             color: var(--dim);
-            font-size: 0.85rem;
-            margin-bottom: 1.2rem;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
         }
         .modal-dialog label {
             display: block;
             color: var(--dim);
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 600;
             margin-bottom: 2px;
-            margin-top: 10px;
+            margin-top: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
-        @media (max-width: 900px) {
-            .video-card-yt {
-                flex-direction: column;
-            }
-            .video-thumb-yt {
-                width: 100%;
-                min-width: unset;
-                border-right: none;
-                border-bottom: 1px solid var(--border);
-            }
-            .video-info-yt {
-                padding: 1.2rem;
-            }
-        }
         @media (max-width: 768px) {
             .navbar {
-                padding: 0.8rem 1.2rem;
+                padding: 0.8rem 1rem;
             }
             .nav-links {
                 display: none;
@@ -1055,66 +1069,64 @@
                 display: flex;
             }
             .main-content {
-                padding: 1.2rem;
+                padding: 1rem;
             }
             .hero-title {
-                font-size: 2.5rem;
+                font-size: 2.3rem;
             }
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 0.8rem;
+                gap: 0.7rem;
+            }
+            .video-thumb-yt {
+                width: 120px;
+                min-width: 100px;
             }
             .lb-nav-btn {
-                display: none;
+                display: flex;
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+            .lb-nav-prev {
+                left: 8px;
+            }
+            .lb-nav-next {
+                right: 8px;
             }
             .quick-links {
-                gap: 10px;
+                gap: 8px;
             }
             .quick-link-card {
-                min-width: calc(50% - 5px);
+                min-width: calc(50% - 4px);
                 padding: 1rem;
             }
             .doc-info span {
-                max-width: 150px;
+                max-width: 140px;
             }
             .doc-item {
                 flex-wrap: wrap;
-                gap: 10px;
+                gap: 8px;
             }
         }
     </style>
 </head>
 <body>
-
     <div class="toast-container" id="toastContainer"></div>
     <div class="overlay" id="mobileOverlay"></div>
-
-    <!-- PHOTO LIGHTBOX -->
     <div class="lightbox" id="lightbox">
-        <button class="lb-download-btn" id="lbDownloadBtn" title="Download Image"><i class="fas fa-download"></i></button>
+        <button class="lb-download-btn" id="lbDownloadBtn" title="Download"><i class="fas fa-download"></i></button>
         <button class="lb-close-btn" onclick="closeLB()">✕</button>
         <button class="lb-nav-btn lb-nav-prev" onclick="lbNav(-1)"><i class="fas fa-chevron-left"></i></button>
         <button class="lb-nav-btn lb-nav-next" onclick="lbNav(1)"><i class="fas fa-chevron-right"></i></button>
         <div class="lb-image-wrap" id="lbImageWrap"><img id="lbImage" src="" alt=""></div>
         <div class="lb-counter-text" id="lbCounter"></div>
-        <div class="lb-action-bar">
-            <button id="lbCopyBtn"><i class="fas fa-link"></i> Copy Link</button>
-        </div>
+        <div class="lb-action-bar"><button id="lbCopyBtn"><i class="fas fa-link"></i> Copy Link</button></div>
     </div>
-
-    <!-- DOC FULL LIGHTBOX -->
     <div class="doc-lightbox-full" id="docFullLightbox">
-        <div class="doc-header">
-            <span class="doc-title" id="docFullTitle">Document</span>
-            <div class="doc-actions" style="display:flex;gap:12px;align-items:center;">
-                <button class="doc-download-btn" id="docFullDownloadBtn"><i class="fas fa-download"></i> Download</button>
-                <button class="doc-close-btn" onclick="closeDocFullLB()">✕</button>
-            </div>
-        </div>
+        <div class="doc-header"><span class="doc-title" id="docFullTitle">Document</span><div class="doc-actions" style="display:flex;gap:10px;align-items:center;"><button class="doc-download-btn" id="docFullDownloadBtn"><i class="fas fa-download"></i> Download</button><button class="doc-close-btn" onclick="closeDocFullLB()">✕</button></div></div>
         <iframe class="doc-content" id="docFullIframe" src=""></iframe>
     </div>
-
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-logo" onclick="navigateTo('home')">princexit_</div>
         <ul class="nav-links" id="desktopNavLinks">
@@ -1129,56 +1141,33 @@
                 <button class="nav-btn" onclick="showAuth('login')">Log In</button>
                 <button class="nav-btn primary" onclick="showAuth('signup')">Sign Up</button>
             </span>
-            <span class="profile-chip hidden" id="profileChip">
-                <span id="profileEmailText"></span>
-                <i class="fas fa-chevron-down" style="font-size:0.7rem;"></i>
-            </span>
-            <div class="profile-dropdown" id="profileDropdown">
-                <a onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a>
-            </div>
+            <span class="profile-chip hidden" id="profileChip"><span id="profileEmailText"></span><i class="fas fa-chevron-down" style="font-size:0.7rem;"></i></span>
+            <div class="profile-dropdown" id="profileDropdown"><a onclick="doLogout()"><i class="fas fa-sign-out-alt"></i> Logout</a></div>
             <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
         </div>
     </nav>
-
-    <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
         <a onclick="navigateTo('home')"><i class="fas fa-home fa-fw"></i> Home</a>
         <a onclick="navigateTo('gallery')"><i class="fas fa-image fa-fw"></i> Photos</a>
         <a onclick="navigateTo('videos')"><i class="fas fa-video fa-fw"></i> Videos</a>
         <a onclick="navigateTo('documents')"><i class="fas fa-file-alt fa-fw"></i> Documents</a>
+        <a href="https://princexit470.github.io/Chatus/" target="_blank"><i class="fas fa-comment fa-fw"></i> ChatUs</a>
+        <a href="https://princexit470.github.io/QR-studio/" target="_blank"><i class="fas fa-qrcode fa-fw"></i> QR Studio</a>
         <a onclick="navigateTo('about')"><i class="fas fa-info-circle fa-fw"></i> Contact</a>
         <hr class="mobile-divider">
         <div id="mobileLoggedOut">
             <a onclick="showAuth('login')"><i class="fas fa-sign-in-alt fa-fw"></i> Log In</a>
             <a onclick="showAuth('signup')" style="color: var(--gold);"><i class="fas fa-user-plus fa-fw"></i> Sign Up</a>
         </div>
-        <div id="mobileLoggedIn" class="hidden">
-            <a onclick="doLogout()"><i class="fas fa-sign-out-alt fa-fw"></i> Logout</a>
-        </div>
+        <div id="mobileLoggedIn" class="hidden"><a onclick="doLogout()"><i class="fas fa-sign-out-alt fa-fw"></i> Logout</a></div>
     </div>
-
-    <!-- MAIN CONTENT -->
     <div class="main-content">
-        <!-- HOME -->
         <div class="page show" id="page-home">
-            <div class="hero-section">
-                <h1 class="hero-title">princexit_</h1>
-                <p class="hero-subtitle">Photography • Cinematography • Creative</p>
-            </div>
+            <div class="hero-section"><h1 class="hero-title">princexit_</h1><p class="hero-subtitle">Photography • Cinematography • Creative</p></div>
             <div class="live-section" id="liveSection">
-                <div class="live-header">
-                    <div class="live-header-left">
-                        <span class="live-badge offline" id="liveBadge"><i class="fas fa-circle"></i> OFFLINE</span>
-                        <h3 style="font-size:1.3rem;font-weight:600;">Live Broadcast</h3>
-                    </div>
-                </div>
-                <div class="live-video-container" id="liveVideoContainer">
-                    <div class="coming-soon-overlay" id="liveOverlay">
-                        <i class="fas fa-video-slash"></i>
-                        <h3>STREAM OFFLINE</h3>
-                        <p style="color:#666;">Waiting for host...</p>
-                    </div>
-                </div>
+                <div class="live-header"><div class="live-header-left"><span class="live-badge offline" id="liveBadge"><i class="fas fa-circle"></i> OFFLINE</span><h3 style="font-size:1.3rem;font-weight:600;">Live Broadcast</h3></div></div>
+                <div class="live-video-container" id="liveVideoContainer"><div class="coming-soon-overlay" id="liveOverlay"><i class="fas fa-video-slash"></i><h3>STREAM OFFLINE</h3><p style="color:#666;">Waiting for host...</p></div></div>
+                <button class="live-admin-set-btn hidden" id="liveAdminSetBtn" onclick="showLiveStreamModal()"><i class="fas fa-cog"></i> Set Live</button>
             </div>
             <div class="quick-links">
                 <div class="quick-link-card" onclick="navigateTo('gallery')"><i class="fas fa-camera-retro"></i><span>Photos</span></div>
@@ -1186,53 +1175,28 @@
                 <div class="quick-link-card" onclick="navigateTo('documents')"><i class="fas fa-folder-open"></i><span>Documents</span></div>
             </div>
         </div>
-
-        <!-- PHOTOS -->
         <div class="page" id="page-gallery">
             <h2 class="section-title"><i class="fas fa-images" style="color:var(--gold);"></i> Photos</h2>
-            <div class="add-media-bar" id="photoAddBar" style="display:none;">
-                <button class="add-media-btn" onclick="openAddMediaModal('photo')"><i class="fas fa-plus-circle"></i> Add Photo</button>
-                <span class="media-count-badge" id="photoCountBadge">0 photos</span>
-            </div>
+            <div class="add-media-bar" id="photoAddBar" style="display:none;"><button class="add-media-btn" onclick="openAddMediaModal('photo')"><i class="fas fa-plus-circle"></i> Add Photo</button><span class="media-count-badge" id="photoCountBadge">0 photos</span></div>
             <div class="search-container"><i class="fas fa-search"></i><input type="text" id="searchPhotos" placeholder="Search photos..." onkeyup="renderPhotos()"></div>
             <div class="gallery-grid" id="photoGrid"></div>
         </div>
-
-        <!-- VIDEOS -->
         <div class="page" id="page-videos">
             <h2 class="section-title"><i class="fas fa-play-circle" style="color:var(--gold);"></i> Videos</h2>
-            <div class="add-media-bar" id="videoAddBar" style="display:none;">
-                <button class="add-media-btn" onclick="openAddMediaModal('video')"><i class="fas fa-plus-circle"></i> Add Video</button>
-                <span class="media-count-badge" id="videoCountBadge">0 videos</span>
-            </div>
+            <div class="add-media-bar" id="videoAddBar" style="display:none;"><button class="add-media-btn" onclick="openAddMediaModal('video')"><i class="fas fa-plus-circle"></i> Add Video</button><span class="media-count-badge" id="videoCountBadge">0 videos</span></div>
             <div class="search-container"><i class="fas fa-search"></i><input type="text" id="searchVideos" placeholder="Search videos..." onkeyup="renderVideos()"></div>
             <div class="video-feed" id="videoFeed"></div>
         </div>
-
-        <!-- DOCUMENTS -->
         <div class="page" id="page-documents">
             <h2 class="section-title"><i class="fas fa-file-pdf" style="color:var(--gold);"></i> Documents</h2>
-            <div class="add-media-bar" id="docAddBar" style="display:none;">
-                <button class="add-media-btn" onclick="openAddMediaModal('doc')"><i class="fas fa-plus-circle"></i> Add Document</button>
-                <span class="media-count-badge" id="docCountBadge">0 docs</span>
-            </div>
+            <div class="add-media-bar" id="docAddBar" style="display:none;"><button class="add-media-btn" onclick="openAddMediaModal('doc')"><i class="fas fa-plus-circle"></i> Add Document</button><span class="media-count-badge" id="docCountBadge">0 docs</span></div>
             <div class="search-container"><i class="fas fa-search"></i><input type="text" id="searchDocs" placeholder="Search documents..." onkeyup="renderDocs()"></div>
             <div class="doc-list" id="docList"></div>
         </div>
-
-        <!-- CONTACT -->
         <div class="page" id="page-about">
-            <div style="text-align:center;padding:4rem 2rem;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);max-width:600px;margin:0 auto;">
-                <h2 style="color:var(--gold);font-size:2rem;margin-bottom:1rem;">Get in Touch</h2>
-                <p style="color:var(--dim);margin-bottom:2rem;">princekvishwakarma@yahoo.com</p>
-                <div style="font-size:1.8rem;">
-                    <a href="https://instagram.com/princexit_" target="_blank" style="color:#fff;"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+            <div style="text-align:center;padding:4rem 2rem;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);max-width:600px;margin:0 auto;"><h2 style="color:var(--gold);font-size:2rem;margin-bottom:1rem;">Get in Touch</h2><p style="color:var(--dim);margin-bottom:2rem;">princekvishwakarma@yahoo.com</p><div style="font-size:1.8rem;"><a href="https://instagram.com/princexit_" target="_blank" style="color:#fff;"><i class="fab fa-instagram"></i></a></div></div>
         </div>
     </div>
-
-    <!-- AUTH MODAL -->
     <div class="modal-backdrop" id="authModal">
         <div class="modal-dialog">
             <button class="modal-close" onclick="closeModal('authModal')">✕</button>
@@ -1241,18 +1205,14 @@
             <input type="password" id="authPass" placeholder="Password">
             <span class="forgot-link" id="forgotPassBtn" onclick="showAuth('reset')">Forgot Password?</span>
             <button class="modal-submit" id="authSubmit">Log In</button>
-            <p style="text-align:center;margin-top:1.5rem;font-size:0.9rem;color:var(--dim);" id="authSwitch">
-                New here? <span class="modal-link" id="swLink" onclick="showAuth('signup')">Create account</span>
-            </p>
+            <p style="text-align:center;margin-top:1.2rem;font-size:0.85rem;color:var(--dim);" id="authSwitch">New here? <span class="modal-link" onclick="showAuth('signup')">Create account</span></p>
         </div>
     </div>
-
-    <!-- ADD MEDIA MODAL -->
     <div class="modal-backdrop" id="addMediaModal">
         <div class="modal-dialog">
             <button class="modal-close" onclick="closeModal('addMediaModal')">✕</button>
             <h2 id="addMediaTitle">Add Media Link</h2>
-            <p class="modal-subtitle">Paste a direct link (Google Drive, YouTube, image URL, etc.)</p>
+            <p class="modal-subtitle">Paste a direct link</p>
             <label>Title <span style="color:#e74c3c;">*</span></label>
             <input type="text" id="addMediaName" placeholder="e.g., Sunset Portrait">
             <label>Link / URL <span style="color:#e74c3c;">*</span></label>
@@ -1261,24 +1221,23 @@
             <input type="hidden" id="addMediaType" value="photo">
         </div>
     </div>
-
+    <div class="modal-backdrop" id="liveStreamModal">
+        <div class="modal-dialog">
+            <button class="modal-close" onclick="closeModal('liveStreamModal')">✕</button>
+            <h2>Set Live Stream</h2>
+            <p class="modal-subtitle">Paste embed URL (YouTube Live, HLS, etc.)</p>
+            <label>Stream URL</label>
+            <input type="text" id="liveStreamUrl" placeholder="https://...">
+            <button class="modal-submit" id="liveStreamSubmit">Go Live</button>
+            <button class="nav-btn" style="width:100%;margin-top:0.5rem;background:transparent;color:var(--dim);" onclick="clearLiveStream()">Stop Streaming</button>
+        </div>
+    </div>
     <script>
-        // ==========================================
-        // SUPABASE + ADMIN
-        // ==========================================
-        const SB = window.supabase.createClient(
-            'https://wvlvamuehbyfdsozjczk.supabase.co',
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind2bHZhbXVlaGJ5ZmRzb3pqY3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NTM4MDAsImV4cCI6MjA5MTEyOTgwMH0.oaF4wymSu0ePwQSp3moV0sKZVgz5f50ILun5iaU816A'
-        );
+        const SB = window.supabase.createClient('https://wvlvamuehbyfdsozjczk.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind2bHZhbXVlaGJ5ZmRzb3pqY3prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU1NTM4MDAsImV4cCI6MjA5MTEyOTgwMH0.oaF4wymSu0ePwQSp3moV0sKZVgz5f50ILun5iaU816A');
         const ADMIN_EMAIL = "helloworldd1224@gmail.com";
+        let USER = null, AUTH_MODE = 'login';
+        let ALL_PHOTOS = [], ALL_VIDEOS = [], ALL_DOCS = [];
 
-        let USER = null,
-            AUTH_MODE = 'login';
-        let ALL_PHOTOS = [],
-            ALL_VIDEOS = [],
-            ALL_DOCS = [];
-
-        // ============ TOAST ============
         function TOAST(m, t = 'info') {
             const b = document.getElementById('toastContainer');
             const d = document.createElement('div');
@@ -1287,10 +1246,8 @@
                 t === 'error' ? '<i class="fas fa-exclamation-circle" style="color:#e74c3c;margin-right:8px;"></i>' :
                 '<i class="fas fa-info-circle" style="color:#3498db;margin-right:8px;"></i>') + m;
             b.appendChild(d);
-            setTimeout(() => {
-                d.style.animation = 'toastIn 0.4s ease reverse forwards';
-                setTimeout(() => d.remove(), 400);
-            }, 3500);
+            setTimeout(() => { d.style.animation = 'toastIn 0.4s ease reverse forwards';
+                setTimeout(() => d.remove(), 400); }, 3500);
         }
 
         function isAdmin() { return USER && USER.email === ADMIN_EMAIL; }
@@ -1300,99 +1257,53 @@
             document.getElementById('photoAddBar').style.display = admin ? 'flex' : 'none';
             document.getElementById('videoAddBar').style.display = admin ? 'flex' : 'none';
             document.getElementById('docAddBar').style.display = admin ? 'flex' : 'none';
+            document.getElementById('liveAdminSetBtn').classList.toggle('hidden', !admin);
             renderPhotos();
             renderVideos();
             renderDocs();
         }
 
-        // ============ URL PROCESSING ============
-        function extractDriveId(url) {
-            const m = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/);
-            return m ? m[1] : null;
-        }
+        function extractDriveId(url) { const m = url.match(/\/d\/([a-zA-Z0-9_-]+)/) || url.match(/id=([a-zA-Z0-9_-]+)/); return m ?
+                m[1] : null; }
 
         function isYouTube(url) { return /(youtube\.com|youtu\.be)/i.test(url); }
 
-        function getYouTubeEmbed(url) {
-            const m = url.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([a-zA-Z0-9_-]{11})/);
-            return m ? `https://www.youtube.com/embed/${m[1]}` : url;
-        }
+        function getYouTubeEmbed(url) { const m = url.match(/(?:v=|youtu\.be\/|embed\/|shorts\/)([a-zA-Z0-9_-]{11})/); return m ?
+                `https://www.youtube.com/embed/${m[1]}` : url; }
 
         function isVimeo(url) { return /vimeo\.com/i.test(url); }
 
-        function getVimeoEmbed(url) {
-            const m = url.match(/vimeo\.com\/(\d+)/);
-            return m ? `https://player.vimeo.com/video/${m[1]}` : url;
-        }
+        function getVimeoEmbed(url) { const m = url.match(/vimeo\.com\/(\d+)/); return m ?
+            `https://player.vimeo.com/video/${m[1]}` : url; }
+
+        function isDirectVideoFile(url) { return /\.(mp4|webm|mov|avi|mkv|ogg|m3u8)(\?|$)/i.test(url); }
 
         function processMediaUrl(url, type) {
             const driveId = extractDriveId(url);
-            if (driveId) {
-                if (type === 'photo') {
-                    return {
-                        displayUrl: `https://drive.google.com/uc?export=view&id=${driveId}`,
-                            downloadUrl: `https://drive.google.com/uc?export=download&id=${driveId}`,
-                            originalLink: `https://drive.google.com/file/d/${driveId}/view`,
-                            isDrive: true
-                    };
-                } else if (type === 'video') {
-                    return {
-                        displayUrl: `https://drive.google.com/file/d/${driveId}/preview`,
-                            downloadUrl: `https://drive.google.com/uc?export=download&id=${driveId}`,
-                            originalLink: `https://drive.google.com/file/d/${driveId}/view`,
-                            isDrive: true
-                    };
-                } else {
-                    return {
-                        displayUrl: `https://drive.google.com/file/d/${driveId}/preview`,
-                            downloadUrl: `https://drive.google.com/uc?export=download&id=${driveId}`,
-                            originalLink: `https://drive.google.com/file/d/${driveId}/view`,
-                            isDrive: true
-                    };
-                }
-            }
-            if (type === 'video' && isYouTube(url)) {
-                const embed = getYouTubeEmbed(url);
-                return { displayUrl: embed, downloadUrl: url, originalLink: url, isYouTube: true };
-            }
-            if (type === 'video' && isVimeo(url)) {
-                const embed = getVimeoEmbed(url);
-                return { displayUrl: embed, downloadUrl: url, originalLink: url, isVimeo: true };
-            }
-            return { displayUrl: url, downloadUrl: url, originalLink: url, isDirect: true };
+            if (driveId) return { displayUrl: type === 'photo' ? `https://drive.google.com/uc?export=view&id=${driveId}` :
+                    `https://drive.google.com/file/d/${driveId}/preview`, downloadUrl: `https://drive.google.com/uc?export=download&id=${driveId}`,
+                originalLink: `https://drive.google.com/file/d/${driveId}/view`, isDrive: true, isDirectVideo: false };
+            if (type === 'video' && isYouTube(url)) return { displayUrl: getYouTubeEmbed(url), downloadUrl: url,
+                originalLink: url, isYouTube: true, isDirectVideo: false };
+            if (type === 'video' && isVimeo(url)) return { displayUrl: getVimeoEmbed(url), downloadUrl: url,
+            originalLink: url, isVimeo: true, isDirectVideo: false };
+            if (type === 'video' && isDirectVideoFile(url)) return { displayUrl: url, downloadUrl: url, originalLink: url,
+                isDirectVideo: true, isYouTube: false, isVimeo: false, isDrive: false };
+            return { displayUrl: url, downloadUrl: url, originalLink: url, isDirect: true, isDirectVideo: type ===
+                    'video' };
         }
 
-        // ============ SUPABASE DB FUNCTIONS ============
         async function fetchAllMedia() {
             const { data, error } = await SB.from('media').select('*').order('created_at', { ascending: false });
-            if (error) {
-                if (error.code === 'PGRST205') {
-                    TOAST('Table "media" not found. Run the SQL setup in Supabase SQL Editor.', 'error');
-                } else {
-                    TOAST('Error loading media: ' + error.message, 'error');
-                }
-                return [];
-            }
+            if (error) { if (error.code === 'PGRST205') TOAST(
+                    'Table "media" missing. Run SQL setup in Supabase.', 'error');
+                else TOAST('Error: ' + error.message, 'error'); return []; }
             return data || [];
         }
-
-        async function addMediaToDB(type, title, url) {
-            const { data, error } = await SB.from('media').insert([{ type, title, url }]).select();
-            if (error) {
-                TOAST(error.message || 'Failed to add', 'error');
-                return null;
-            }
-            return data;
-        }
-
-        async function deleteMediaFromDB(id) {
-            const { error } = await SB.from('media').delete().eq('id', id);
-            if (error) {
-                TOAST(error.message || 'Delete failed', 'error');
-                return false;
-            }
-            return true;
-        }
+        async function addMediaToDB(type, title, url) { const { data, error } = await SB.from('media').insert([{ type,
+                title, url }]).select(); if (error) { TOAST(error.message || 'Failed', 'error'); return null; } return data; }
+        async function deleteMediaFromDB(id) { const { error } = await SB.from('media').delete().eq('id', id); if (error) { TOAST
+                (error.message || 'Delete failed', 'error'); return false; } return true; }
 
         async function loadAllMediaFromDB() {
             const all = await fetchAllMedia();
@@ -1401,17 +1312,10 @@
             ALL_DOCS = [];
             all.forEach(item => {
                 const p = processMediaUrl(item.url, item.type);
-                const obj = {
-                    id: item.id,
-                    title: item.title,
-                    displayUrl: p.displayUrl,
-                    downloadUrl: p.downloadUrl,
-                    originalLink: p.originalLink,
-                    type: item.type,
-                    isYouTube: p.isYouTube || false,
-                    isVimeo: p.isVimeo || false,
-                    isDrive: p.isDrive || false
-                };
+                const obj = { id: item.id, title: item.title, displayUrl: p.displayUrl, downloadUrl: p
+                        .downloadUrl, originalLink: p.originalLink, type: item.type, isYouTube: p.isYouTube ||
+                        false, isVimeo: p.isVimeo || false, isDrive: p.isDrive || false, isDirectVideo: p
+                        .isDirectVideo || false };
                 if (item.type === 'photo') ALL_PHOTOS.push(obj);
                 else if (item.type === 'video') ALL_VIDEOS.push(obj);
                 else ALL_DOCS.push(obj);
@@ -1423,17 +1327,16 @@
         }
 
         function updateCountBadges() {
-            document.getElementById('photoCountBadge').textContent =
-                ALL_PHOTOS.length + ' photo' + (ALL_PHOTOS.length !== 1 ? 's' : '');
-            document.getElementById('videoCountBadge').textContent =
-                ALL_VIDEOS.length + ' video' + (ALL_VIDEOS.length !== 1 ? 's' : '');
-            document.getElementById('docCountBadge').textContent =
-                ALL_DOCS.length + ' doc' + (ALL_DOCS.length !== 1 ? 's' : '');
+            document.getElementById('photoCountBadge').textContent = ALL_PHOTOS.length + ' photo' + (ALL_PHOTOS.length !==
+                1 ? 's' : '');
+            document.getElementById('videoCountBadge').textContent = ALL_VIDEOS.length + ' video' + (ALL_VIDEOS.length !==
+                1 ? 's' : '');
+            document.getElementById('docCountBadge').textContent = ALL_DOCS.length + ' doc' + (ALL_DOCS.length !== 1 ? 's' :
+                '');
         }
 
-        // ============ ADD MEDIA MODAL ============
         function openAddMediaModal(type) {
-            if (!isAdmin()) return TOAST('Only admin can add media', 'error');
+            if (!isAdmin()) return TOAST('Only admin can add', 'error');
             document.getElementById('addMediaType').value = type;
             const labels = { photo: 'Photo', video: 'Video', doc: 'Document' };
             document.getElementById('addMediaTitle').textContent = 'Add ' + labels[type] + ' Link';
@@ -1442,123 +1345,86 @@
             document.getElementById('addMediaModal').classList.add('show');
             setTimeout(() => document.getElementById('addMediaName').focus(), 300);
         }
-
         document.getElementById('addMediaSubmit').onclick = async () => {
             const type = document.getElementById('addMediaType').value;
             const title = document.getElementById('addMediaName').value.trim();
             const url = document.getElementById('addMediaUrl').value.trim();
             if (!title) return TOAST('Enter a title', 'error');
             if (!url) return TOAST('Paste a link', 'error');
-            if (!url.startsWith('http') && !url.includes('drive.google.com') && !url.includes('youtu')) {
-                return TOAST('Enter a valid URL', 'error');
-            }
+            if (!url.startsWith('http') && !url.includes('drive.google.com') && !url.includes('youtu')) return TOAST(
+                'Enter a valid URL', 'error');
             const result = await addMediaToDB(type, title, url);
-            if (result) {
-                TOAST('Added!', 'success');
-                closeModal('addMediaModal');
-                await loadAllMediaFromDB();
-            }
+            if (result) { TOAST('Added!', 'success');
+                closeModal('addMediaModal'); await loadAllMediaFromDB(); }
         };
 
-        // ============ AUTH ============
-        async function initAuth() {
-            const { data } = await SB.auth.getSession();
-            updateUI(data.session ? data.session.user : null);
-            await loadAllMediaFromDB();
-        }
-        SB.auth.onAuthStateChange((event, session) => {
-            updateUI(session ? session.user : null);
-            if (session) loadAllMediaFromDB();
-        });
+        async function initAuth() { const { data } = await SB.auth.getSession();
+            updateUI(data.session ? data.session.user : null); await loadAllMediaFromDB(); }
+        SB.auth.onAuthStateChange((event, session) => { updateUI(session ? session.user : null); if (session)
+                loadAllMediaFromDB(); });
 
         function updateUI(u) {
             USER = u;
-            const loggedIn = !!u;
-            document.getElementById('desktopAuthBtns').classList.toggle('hidden', loggedIn);
-            document.getElementById('profileChip').classList.toggle('hidden', !loggedIn);
-            document.getElementById('mobileLoggedOut').classList.toggle('hidden', loggedIn);
-            document.getElementById('mobileLoggedIn').classList.toggle('hidden', !loggedIn);
+            const li = !!u;
+            document.getElementById('desktopAuthBtns').classList.toggle('hidden', li);
+            document.getElementById('profileChip').classList.toggle('hidden', !li);
+            document.getElementById('mobileLoggedOut').classList.toggle('hidden', li);
+            document.getElementById('mobileLoggedIn').classList.toggle('hidden', !li);
             if (u) document.getElementById('profileEmailText').textContent = u.email.split('@')[0];
             updateAdminUI();
+            loadLiveStreamUrl();
         }
 
         function showAuth(mode) {
             AUTH_MODE = mode;
-            const title = document.getElementById('authTitle');
-            const submit = document.getElementById('authSubmit');
-            const switchEl = document.getElementById('authSwitch');
-            const forgot = document.getElementById('forgotPassBtn');
-            const emailInp = document.getElementById('authEmail');
-            const passInp = document.getElementById('authPass');
-
+            const title = document.getElementById('authTitle'),
+                submit = document.getElementById('authSubmit'),
+                sw = document.getElementById('authSwitch'),
+                forgot = document.getElementById('forgotPassBtn'),
+                emailInp = document.getElementById('authEmail'),
+                passInp = document.getElementById('authPass');
             emailInp.style.display = 'block';
             passInp.style.display = 'block';
             forgot.style.display = 'none';
             emailInp.value = '';
             passInp.value = '';
-
-            if (mode === 'login') {
-                title.textContent = 'Welcome Back';
+            if (mode === 'login') { title.textContent = 'Welcome Back';
                 submit.textContent = 'Log In';
-                switchEl.innerHTML =
-                    'New here? <span class="modal-link" onclick="showAuth(\'signup\')">Create account</span>';
-                forgot.style.display = 'block';
-            } else if (mode === 'signup') {
-                title.textContent = 'Create Account';
+                sw.innerHTML = 'New here? <span class="modal-link" onclick="showAuth(\'signup\')">Create account</span>';
+                forgot.style.display = 'block'; } else if (mode === 'signup') { title.textContent = 'Create Account';
                 submit.textContent = 'Sign Up';
-                switchEl.innerHTML =
-                    'Have account? <span class="modal-link" onclick="showAuth(\'login\')">Log In</span>';
-            } else if (mode === 'reset') {
-                title.textContent = 'Reset Password';
+                sw.innerHTML = 'Have account? <span class="modal-link" onclick="showAuth(\'login\')">Log In</span>'; } else if (
+                mode === 'reset') { title.textContent = 'Reset Password';
                 submit.textContent = 'Send Reset Link';
                 passInp.style.display = 'none';
-                switchEl.innerHTML = '<span class="modal-link" onclick="showAuth(\'login\')">Back to Login</span>';
-            }
+                sw.innerHTML = '<span class="modal-link" onclick="showAuth(\'login\')">Back to Login</span>'; }
             document.getElementById('authModal').classList.add('show');
         }
 
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('show');
-        }
-
+        function closeModal(id) { document.getElementById(id).classList.remove('show'); }
         document.getElementById('authSubmit').onclick = async () => {
-            const email = document.getElementById('authEmail').value.trim();
-            const pass = document.getElementById('authPass').value.trim();
+            const email = document.getElementById('authEmail').value.trim(),
+                pass = document.getElementById('authPass').value.trim();
             if (AUTH_MODE !== 'reset' && !email) return TOAST('Enter email', 'error');
             if (AUTH_MODE !== 'reset' && !pass) return TOAST('Enter password', 'error');
             if (AUTH_MODE === 'reset' && !email) return TOAST('Enter email', 'error');
-
             document.getElementById('authSubmit').textContent = 'Please wait...';
             try {
-                if (AUTH_MODE === 'reset') {
-                    const { error } = await SB.auth.resetPasswordForEmail(email);
-                    if (error) throw error;
-                    TOAST('Reset link sent! Check your email.', 'success');
-                    closeModal('authModal');
-                    return;
-                }
-                const r = AUTH_MODE === 'signup' ?
-                    await SB.auth.signUp({ email, password: pass }) :
-                    await SB.auth.signInWithPassword({ email, password: pass });
+                if (AUTH_MODE === 'reset') { const { error } = await SB.auth.resetPasswordForEmail(
+                email); if (error) throw error;
+                    TOAST('Reset link sent!', 'success');
+                    closeModal('authModal'); return; }
+                const r = AUTH_MODE === 'signup' ? await SB.auth.signUp({ email, password: pass }) : await SB.auth
+                    .signInWithPassword({ email, password: pass });
                 if (r.error) throw r.error;
-                if (AUTH_MODE === 'signup' && r.data.user && !r.data.session) {
-                    TOAST('Check your email for confirmation link!', 'success');
-                } else {
-                    TOAST(AUTH_MODE === 'signup' ? 'Account created!' : 'Logged in!', 'success');
-                }
+                TOAST(AUTH_MODE === 'signup' ? 'Account created!' : 'Logged in!', 'success');
                 closeModal('authModal');
-                updateUI(r.data.user);
-                await loadAllMediaFromDB();
-            } catch (e) {
-                TOAST(e.message || 'Error', 'error');
-            } finally {
-                document.getElementById('authSubmit').textContent =
-                    AUTH_MODE === 'login' ? 'Log In' : AUTH_MODE === 'signup' ? 'Sign Up' : 'Send Reset Link';
-            }
+                updateUI(r.data.user); await loadAllMediaFromDB();
+            } catch (e) { TOAST(e.message || 'Error', 'error'); } finally { document.getElementById('authSubmit')
+                    .textContent = AUTH_MODE === 'login' ? 'Log In' : AUTH_MODE === 'signup' ? 'Sign Up' :
+                    'Send Reset Link'; }
         };
-
-        async function doLogout() {
-            await SB.auth.signOut();
+        async function doLogout() { await SB.auth.signOut();
             document.getElementById('profileDropdown').classList.remove('show');
             ALL_PHOTOS = [];
             ALL_VIDEOS = [];
@@ -1567,17 +1433,13 @@
             renderPhotos();
             renderVideos();
             renderDocs();
-            TOAST('Logged out', 'info');
-        }
+            TOAST('Logged out', 'info'); }
 
-        // ============ NAVIGATION ============
         function navigateTo(page, push = true) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('show'));
-            const target = document.getElementById('page-' + page);
-            if (target) target.classList.add('show');
+            const t = document.getElementById('page-' + page); if (t) t.classList.add('show');
             document.querySelectorAll('#desktopNavLinks a').forEach(a => a.classList.remove('active'));
-            const link = document.querySelector(`a[data-page="${page}"]`);
-            if (link) link.classList.add('active');
+            const link = document.querySelector(`a[data-page="${page}"]`); if (link) link.classList.add('active');
             if (push) history.pushState({ page }, "", "#" + page);
             document.getElementById('mobileMenu').classList.remove('open');
             document.getElementById('mobileOverlay').classList.remove('show');
@@ -1589,88 +1451,78 @@
             if (document.getElementById('docFullLightbox').classList.contains('show')) { closeDocFullLB(); return; }
             if (document.getElementById('authModal').classList.contains('show')) { closeModal('authModal'); return; }
             if (document.getElementById('addMediaModal').classList.contains('show')) { closeModal(
-                'addMediaModal'); return; }
+            'addMediaModal'); return; }
             navigateTo(e.state?.page || 'home', false);
         };
 
-        // ============ RENDER PHOTOS ============
         function renderPhotos() {
             const q = (document.getElementById('searchPhotos')?.value || '').toLowerCase();
             const filtered = ALL_PHOTOS.filter(p => (p.title || '').toLowerCase().includes(q));
             const grid = document.getElementById('photoGrid');
-            if (ALL_PHOTOS.length === 0) {
-                grid.innerHTML =
+            if (ALL_PHOTOS.length === 0) { grid.innerHTML =
                     '<div style="text-align:center;padding:4rem;grid-column:1/-1;background:var(--surface);border-radius:14px;border:1px solid var(--border);color:var(--dim);"><i class="fas fa-images" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>No photos yet</div>';
-                return;
-            }
-            if (!filtered.length) {
-                grid.innerHTML =
+                return; }
+            if (!filtered.length) { grid.innerHTML =
                     '<div style="text-align:center;padding:2rem;grid-column:1/-1;color:var(--dim);">No match</div>';
-                return;
-            }
+            return; }
             const admin = isAdmin();
-            grid.innerHTML = filtered.map((p, i) => {
+            grid.innerHTML = filtered.map((p) => {
                 const idx = ALL_PHOTOS.indexOf(p);
                 return `
-            <div class="gallery-item" onclick="openLB(${idx})">
-              <img src="${p.displayUrl}" loading="lazy" alt="${p.title}" onerror="this.style.opacity='0.3'">
-              <div class="media-title">${p.title}</div>
-              <button class="menu-btn" onclick="toggleMenu(event,'pm${idx}')">⋮</button>
-              ${admin ? `<button class="delete-media-btn" onclick="event.stopPropagation();deleteMediaById('${p.id}')"><i class="fas fa-trash"></i></button>` : ''}
-              <div class="context-menu" id="pm${idx}">
-                <button onclick="event.stopPropagation();downloadMedia('${p.downloadUrl.replace(/'/g,"\\'")}','${p.title.replace(/'/g,"\\'")}')"><i class="fas fa-download"></i> Download</button>
-                <button onclick="event.stopPropagation();navigator.clipboard.writeText('${p.originalLink}');TOAST('Link copied','success')"><i class="fas fa-link"></i> Copy Link</button>
-              </div>
-            </div>`;
+        <div class="gallery-item" onclick="openLB(${idx})">
+          <img src="${p.displayUrl}" loading="lazy" alt="${p.title}" onerror="this.style.opacity='0.3'">
+          <div class="media-title">${p.title}</div>
+          <button class="menu-btn" onclick="toggleMenu(event,'pm${idx}')">⋮</button>
+          ${admin ? `<button class="delete-media-btn" onclick="event.stopPropagation();deleteMediaById('${p.id}')"><i class="fas fa-trash"></i></button>` : ''}
+          <div class="context-menu" id="pm${idx}">
+            <button onclick="event.stopPropagation();downloadMedia('${p.downloadUrl.replace(/'/g,"\\'")}','${p.title.replace(/'/g,"\\'")}')"><i class="fas fa-download"></i> Download</button>
+            <button onclick="event.stopPropagation();navigator.clipboard.writeText('${p.originalLink}');TOAST('Link copied','success')"><i class="fas fa-link"></i> Copy Link</button>
+          </div>
+        </div>`;
             }).join('');
         }
 
-        // ============ RENDER VIDEOS ============
         function renderVideos() {
             const q = (document.getElementById('searchVideos')?.value || '').toLowerCase();
             const filtered = ALL_VIDEOS.filter(v => (v.title || '').toLowerCase().includes(q));
             const feed = document.getElementById('videoFeed');
-            if (ALL_VIDEOS.length === 0) {
-                feed.innerHTML =
-                    '<div style="text-align:center;padding:4rem;background:var(--surface);border-radius:14px;border:1px solid var(--border);color:var(--dim);"><i class="fas fa-video" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>No videos yet</div>';
-                return;
-            }
-            if (!filtered.length) {
-                feed.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>';
-                return;
-            }
+            if (ALL_VIDEOS.length === 0) { feed.innerHTML =
+                    '<div style="text-align:center;padding:3rem;color:var(--dim);"><i class="fas fa-video" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>No videos yet</div>';
+                return; }
+            if (!filtered.length) { feed.innerHTML =
+                    '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>';
+            return; }
             const admin = isAdmin();
-            feed.innerHTML = filtered.map(v => {
+            feed.innerHTML = filtered.map((v, idx) => {
+                const isDirect = v.isDirectVideo;
+                const thumbContent = isDirect ?
+                    `<video src="${v.displayUrl}" preload="metadata" controls playsinline></video>` :
+                    `<iframe src="${v.displayUrl}" allowfullscreen loading="lazy" style="pointer-events:none;"></iframe>`;
                 return `
-            <div class="video-card-yt">
-              <div class="video-thumb-yt"><iframe src="${v.displayUrl}" allowfullscreen loading="lazy"></iframe></div>
-              <div class="video-info-yt">
-                <h3>${v.title}</h3>
-                <div class="video-meta">${v.isYouTube?'YouTube':v.isVimeo?'Vimeo':'Video'}</div>
-                <div class="video-actions-yt">
-                  <button class="primary-btn-yt" onclick="downloadMedia('${v.downloadUrl.replace(/'/g,"\\'")}','${v.title.replace(/'/g,"\\'")}')"><i class="fas fa-download"></i> Download</button>
-                  <button onclick="navigator.clipboard.writeText('${v.originalLink}');TOAST('Link copied','success')"><i class="fas fa-share"></i> Share</button>
-                  ${admin ? `<button onclick="deleteMediaById('${v.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i> Remove</button>` : ''}
-                </div>
-              </div>
-            </div>`;
+        <div class="video-card-yt">
+          <div class="video-thumb-yt" onclick="window.open('${v.originalLink}','_blank')">${thumbContent}</div>
+          <div class="video-info-yt">
+            <h3>${v.title}</h3>
+            <button class="video-menu-dot" onclick="toggleMenu(event,'vm${idx}')">⋮</button>
+            <div class="context-menu" id="vm${idx}">
+              <button onclick="event.stopPropagation(); window.open('${v.originalLink}','_blank')"><i class="fas fa-external-link-alt"></i> Open Original</button>
+              ${admin ? `<button onclick="event.stopPropagation(); deleteMediaById('${v.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i> Delete</button>` : ''}
+            </div>
+          </div>
+        </div>`;
             }).join('');
         }
 
-        // ============ RENDER DOCS ============
         function renderDocs() {
             const q = (document.getElementById('searchDocs')?.value || '').toLowerCase();
             const filtered = ALL_DOCS.filter(d => (d.title || '').toLowerCase().includes(q));
             const list = document.getElementById('docList');
-            if (ALL_DOCS.length === 0) {
-                list.innerHTML =
-                    '<div style="text-align:center;padding:4rem;background:var(--surface);border-radius:14px;border:1px solid var(--border);color:var(--dim);"><i class="fas fa-file-alt" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>No documents yet</div>';
-                return;
-            }
-            if (!filtered.length) {
-                list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>';
-                return;
-            }
+            if (ALL_DOCS.length === 0) { list.innerHTML =
+                    '<div style="text-align:center;padding:3rem;color:var(--dim);"><i class="fas fa-file-alt" style="font-size:3rem;margin-bottom:1rem;display:block;"></i>No documents yet</div>';
+                return; }
+            if (!filtered.length) { list.innerHTML =
+                    '<div style="text-align:center;padding:2rem;color:var(--dim);">No match</div>';
+            return; }
             const admin = isAdmin();
             list.innerHTML = filtered.map(d => {
                 let icon = 'fa-file';
@@ -1680,44 +1532,51 @@
                 else if (t.includes('xls') || t.includes('sheet')) icon = 'fa-file-excel';
                 else if (t.includes('ppt') || t.includes('slide')) icon = 'fa-file-powerpoint';
                 return `
-            <div class="doc-item">
-              <div class="doc-info"><i class="fas ${icon}"></i><span title="${d.title}">${d.title}</span></div>
-              <div class="doc-actions-group">
-                <button class="nav-btn primary" onclick="openDocFull('${d.displayUrl}','${d.title.replace(/'/g,"\\'")}')"><i class="fas fa-eye"></i> View</button>
-                <button class="nav-btn" onclick="downloadMedia('${d.downloadUrl.replace(/'/g,"\\'")}','${d.title.replace(/'/g,"\\'")}')"><i class="fas fa-download"></i></button>
-                ${admin ? `<button class="nav-btn" onclick="deleteMediaById('${d.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i></button>` : ''}
-              </div>
-            </div>`;
+        <div class="doc-item">
+          <div class="doc-info"><i class="fas ${icon}"></i><span title="${d.title}">${d.title}</span></div>
+          <div class="doc-actions-group">
+            <button class="primary" onclick="openDocFull('${d.displayUrl}','${d.title.replace(/'/g,"\\'")}')"><i class="fas fa-eye"></i> View</button>
+            <button onclick="downloadMedia('${d.downloadUrl.replace(/'/g,"\\'")}','${d.title.replace(/'/g,"\\'")}')"><i class="fas fa-download"></i></button>
+            ${admin ? `<button onclick="deleteMediaById('${d.id}')" style="color:#e74c3c;"><i class="fas fa-trash"></i></button>` : ''}
+          </div>
+        </div>`;
             }).join('');
         }
 
-        // ============ DOWNLOAD (STAYS ON-SITE) ============
-        function downloadMedia(url, filename) {
-            // Use fetch to download via browser without leaving the site
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename || '';
-            a.target = '_blank';
-            a.rel = 'noopener';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            TOAST('Downloading...', 'success');
-        }
-
-        // ============ DELETE ============
-        async function deleteMediaById(id) {
-            if (!isAdmin()) return TOAST('Only admin can delete', 'error');
-            if (!confirm('Delete this media permanently?')) return;
-            const ok = await deleteMediaFromDB(id);
-            if (ok) {
-                TOAST('Deleted', 'success');
-                await loadAllMediaFromDB();
+        async function downloadMedia(url, filename) {
+            TOAST('Downloading...', 'info');
+            try {
+                const r = await fetch(url, { mode: 'cors' });
+                if (!r.ok) throw new Error('fetch failed');
+                const blob = await r.blob();
+                const a = document.createElement('a');
+                a.href = URL.createObjectURL(blob);
+                a.download = filename || 'download';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                TOAST('Download complete!', 'success');
+            } catch (e) {
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename || '';
+                a.target = '_blank';
+                a.rel = 'noopener';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
             }
         }
+        async function deleteMediaById(id) {
+            if (!isAdmin()) return TOAST('Only admin can delete', 'error');
+            if (!confirm('Delete permanently?')) return;
+            const ok = await deleteMediaFromDB(id);
+            if (ok) { TOAST('Deleted', 'success');
+                await loadAllMediaFromDB(); }
+        }
 
-        // ============ LIGHTBOX ============
         let LB_IDX = 0;
+        const lbWrap = document.getElementById('lbImageWrap');
 
         function openLB(idx) {
             if (!ALL_PHOTOS.length) return;
@@ -1730,6 +1589,8 @@
         function closeLB() {
             document.getElementById('lightbox').classList.remove('show');
             document.body.classList.remove('no-scroll');
+            lbWrap.style.transform = '';
+            lbWrap.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)';
         }
 
         function updateLB() {
@@ -1737,6 +1598,10 @@
             if (!p) return;
             document.getElementById('lbImage').src = p.displayUrl;
             document.getElementById('lbCounter').textContent = `${LB_IDX+1} / ${ALL_PHOTOS.length} - ${p.title}`;
+            lbWrap.style.transition = 'none';
+            lbWrap.style.transform = '';
+            lbWrap.offsetHeight;
+            lbWrap.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)';
         }
 
         function lbNav(dir) {
@@ -1744,46 +1609,28 @@
             LB_IDX = (LB_IDX + dir + ALL_PHOTOS.length) % ALL_PHOTOS.length;
             updateLB();
         }
-        document.getElementById('lbDownloadBtn').onclick = () => {
-            const p = ALL_PHOTOS[LB_IDX];
-            if (p) downloadMedia(p.downloadUrl, p.title);
-        };
-        document.getElementById('lbCopyBtn').onclick = () => {
-            const p = ALL_PHOTOS[LB_IDX];
-            if (p) { navigator.clipboard.writeText(p.originalLink);
-                TOAST('Link copied', 'success'); }
-        };
+        document.getElementById('lbDownloadBtn').onclick = () => { const p = ALL_PHOTOS[LB_IDX]; if (p) downloadMedia(p
+                .downloadUrl, p.title); };
+        document.getElementById('lbCopyBtn').onclick = () => { const p = ALL_PHOTOS[LB_IDX]; if (p) { navigator.clipboard
+                .writeText(p.originalLink);
+                TOAST('Link copied', 'success'); } };
 
-        // Swipe
-        const lbWrap = document.getElementById('lbImageWrap');
         let sx = 0,
             sy = 0;
-        lbWrap.addEventListener('touchstart', e => {
-            if (e.touches.length) { sx = e.touches[0].clientX;
+        lbWrap.addEventListener('touchstart', e => { if (e.touches.length) { sx = e.touches[0].clientX;
                 sy = e.touches[0].clientY;
-                lbWrap.style.transition = 'none'; }
-        }, { passive: true });
-        lbWrap.addEventListener('touchmove', e => {
-            if (e.touches.length) {
-                const dx = e.touches[0].clientX - sx,
-                    dy = e.touches[0].clientY - sy;
-                if (dy > 0 && Math.abs(dy) > Math.abs(dx)) lbWrap.style.transform =
-                    `translateY(${dy}px) scale(${1-dy/2000})`;
-                else if (Math.abs(dx) > Math.abs(dy)) lbWrap.style.transform = `translateX(${dx}px)`;
-            }
-        }, { passive: true });
-        lbWrap.addEventListener('touchend', e => {
-            lbWrap.style.transition = 'transform 0.3s';
-            if (e.changedTouches.length) {
-                const dx = e.changedTouches[0].clientX - sx,
-                    dy = e.changedTouches[0].clientY - sy;
-                if (dy > 120) closeLB();
-                else if (Math.abs(dx) > 60) lbNav(dx > 0 ? -1 : 1);
-                else lbWrap.style.transform = '';
-            }
-        });
+                lbWrap.style.transition = 'none'; } }, { passive: true });
+        lbWrap.addEventListener('touchmove', e => { if (e.touches.length) { const dx = e.touches[0].clientX - sx,
+                    dy = e.touches[0].clientY - sy; if (dy > 0 && Math.abs(dy) > Math.abs(dx)) lbWrap.style
+                    .transform = `translateY(${dy}px) scale(${1-dy/2000})`; else if (Math.abs(dx) > Math.abs(
+                        dy)) lbWrap.style.transform = `translateX(${dx}px)`; } }, { passive: true });
+        lbWrap.addEventListener('touchend', e => { lbWrap.style.transition =
+                'transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1)'; if (e.changedTouches.length) { const dx = e
+                    .changedTouches[0].clientX - sx,
+                    dy = e.changedTouches[0].clientY - sy; if (dy > 120) closeLB(); else if (Math.abs(dx) >
+                    60) lbNav(dx > 0 ? -1 : 1);
+                else lbWrap.style.transform = ''; } });
 
-        // ============ DOC FULL VIEWER ============
         function openDocFull(url, title) {
             document.getElementById('docFullTitle').textContent = title;
             document.getElementById('docFullIframe').src = url;
@@ -1792,23 +1639,21 @@
             document.getElementById('docFullDownloadBtn').onclick = () => downloadMedia(url, title);
         }
 
-        function closeDocFullLB() {
-            document.getElementById('docFullLightbox').classList.remove('show');
+        function closeDocFullLB() { document.getElementById('docFullLightbox').classList.remove('show');
             document.body.classList.remove('no-scroll');
-            document.getElementById('docFullIframe').src = '';
-        }
+            document.getElementById('docFullIframe').src = ''; }
 
-        // ============ CONTEXT MENUS ============
         function toggleMenu(e, id) {
             e.stopPropagation();
             document.querySelectorAll('.context-menu').forEach(m => m.classList.remove('show'));
-            document.getElementById(id).classList.add('show');
+            const menu = document.getElementById(id); if (menu) menu.classList.add('show');
         }
         document.addEventListener('click', e => {
-            if (!e.target.closest('#profileChip') && !e.target.closest('#profileDropdown'))
-                document.getElementById('profileDropdown').classList.remove('show');
-            if (!e.target.closest('.menu-btn') && !e.target.closest('.context-menu'))
-                document.querySelectorAll('.context-menu').forEach(m => m.classList.remove('show'));
+            if (!e.target.closest('#profileChip') && !e.target.closest('#profileDropdown')) document.getElementById(
+                'profileDropdown').classList.remove('show');
+            if (!e.target.closest('.menu-btn') && !e.target.closest('.video-menu-dot') && !e.target.closest(
+                '.context-menu')) document.querySelectorAll('.context-menu').forEach(m => m.classList.remove(
+                'show'));
             if (e.target.closest('#profileChip')) document.getElementById('profileDropdown').classList.toggle(
             'show');
         });
@@ -1816,32 +1661,72 @@
             closeModal('authModal'); });
         document.getElementById('addMediaModal').addEventListener('click', function(e) { if (e.target === this)
             closeModal('addMediaModal'); });
+        document.getElementById('liveStreamModal').addEventListener('click', function(e) { if (e.target === this)
+            closeModal('liveStreamModal'); });
 
-        // Mobile
-        document.getElementById('hamburgerBtn').onclick = () => {
-            document.getElementById('mobileMenu').classList.add('open');
-            document.getElementById('mobileOverlay').classList.add('show');
-        };
-        document.getElementById('mobileOverlay').onclick = () => {
-            document.getElementById('mobileMenu').classList.remove('open');
-            document.getElementById('mobileOverlay').classList.remove('show');
-        };
+        document.getElementById('hamburgerBtn').onclick = () => { document.getElementById('mobileMenu').classList.add(
+                'open');
+            document.getElementById('mobileOverlay').classList.add('show'); };
+        document.getElementById('mobileOverlay').onclick = () => { document.getElementById('mobileMenu').classList.remove(
+                'open');
+            document.getElementById('mobileOverlay').classList.remove('show'); };
 
-        // Live Stream
-        function initLiveStream() {
-            const url = "";
+        function showLiveStreamModal() {
+            if (!isAdmin()) return;
+            document.getElementById('liveStreamModal').classList.add('show');
+            document.getElementById('liveStreamUrl').value = localStorage.getItem('princexit_live_url') || '';
+        }
+        document.getElementById('liveStreamSubmit').onclick = () => {
+            const url = document.getElementById('liveStreamUrl').value.trim();
+            if (!url) return TOAST('Enter a URL', 'error');
+            localStorage.setItem('princexit_live_url', url);
+            TOAST('Live stream set!', 'success');
+            closeModal('liveStreamModal');
+            loadLiveStreamUrl();
+        };
+        function clearLiveStream() {
+            localStorage.removeItem('princexit_live_url');
+            TOAST('Live stream stopped', 'info');
+            closeModal('liveStreamModal');
+            loadLiveStreamUrl();
+        }
+        function loadLiveStreamUrl() {
+            const url = localStorage.getItem('princexit_live_url') || '';
             const badge = document.getElementById('liveBadge');
             const overlay = document.getElementById('liveOverlay');
             const container = document.getElementById('liveVideoContainer');
-            if (url && url.trim()) {
+            const existingFrame = document.getElementById('streamIframe');
+            if (existingFrame) existingFrame.remove();
+            const existingVideo = container.querySelector('video');
+            if (existingVideo) existingVideo.remove();
+            if (url) {
                 badge.classList.remove('offline');
-                badge.innerHTML = '<i class="fas fa-circle"></i> LIVE';
+                badge.innerHTML = '<i class="fas fa-circle"></i> LIVE NOW';
                 overlay.style.display = 'none';
-                if (!document.getElementById('streamIframe')) {
+                if (url.includes('youtube.com/embed') || url.includes('youtube.com/live') || url.includes(
+                        'youtu.be')) {
+                    const iframe = document.createElement('iframe');
+                    iframe.id = 'streamIframe';
+                    const sep = url.includes('?') ? '&' : '?';
+                    iframe.src = url + sep + 'autoplay=1&controls=0&disablekb=1&modestbranding=1';
+                    iframe.allowFullscreen = true;
+                    iframe.allow = "autoplay; encrypted-media";
+                    container.appendChild(iframe);
+                } else if (isDirectVideoFile(url)) {
+                    const video = document.createElement('video');
+                    video.src = url;
+                    video.controls = true;
+                    video.autoplay = true;
+                    video.playsInline = true;
+                    video.style.width = '100%';
+                    video.style.height = '100%';
+                    container.appendChild(video);
+                } else {
                     const iframe = document.createElement('iframe');
                     iframe.id = 'streamIframe';
                     iframe.src = url;
                     iframe.allowFullscreen = true;
+                    iframe.allow = "autoplay; encrypted-media";
                     container.appendChild(iframe);
                 }
             } else {
@@ -1851,10 +1736,9 @@
             }
         }
 
-        // Init
         window.onload = () => {
             initAuth();
-            initLiveStream();
+            loadLiveStreamUrl();
             const hash = window.location.hash.replace('#', '');
             navigateTo(hash || 'home', false);
         };
